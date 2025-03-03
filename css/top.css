@@ -1,0 +1,71 @@
+.hero {
+	position: relative;
+	/* 子要素の基準 */
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.hero_phone {
+	display: none;
+}
+
+.hero-topView {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	/* 画像の比率を維持 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	/* 背景として下に配置 */
+}
+
+.hero-button {
+	position: absolute;
+	bottom: 10%;
+	left: 20%;
+	transform: translateX(-50%);
+	/* 水平方向に中央配置 */
+	padding: 12px 24px;
+	background: white;
+	color: #002244;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 5px;
+	transition: 0.3s;
+	z-index: 2;
+	/* 画像の上に配置 */
+}
+
+.hero-button:hover {
+	background: #d9d9d9;
+}
+
+@media (max-width: 768px) {
+
+	.hero {
+		display: none;
+	}
+	
+	.hero_phone {
+		display: flex;
+		width: 100%;
+		
+	}
+
+	.hero-topView_phone{
+		width: 100%;
+	}
+	
+
+	.hero-button {
+		bottom: 20%;
+		left: 32%;
+	}
+
+}

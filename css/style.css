@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    width: 100%;
+    background: white;
+}
+
+.header-line{
+	display: none;
+}
+
+.logo {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.nav {
+	display: flex;
+	gap: 15px;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #333;
+	font-size: 14px;
+}
+
+.contact {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.contact .phone {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.contact .button {
+	background-color: orange;
+	color: white;
+	padding: 8px 12px;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+
+.footer {
+	background: url('../img/footer.png') no-repeat center center/cover;
+	color: white;
+	padding: 20px;
+	text-align: left;
+}
+
+.footer-content {
+	max-width: 1200px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.footer-contact {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.footer-info p {
+	margin: 5px 0;
+}
+
+.footer-copyright {
+	text-align: center;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+/* ハンバーガーメニュー */
+       .hamburger-menu {
+           display: none;
+           flex-direction: column;
+           gap: 5px;
+           cursor: pointer;
+       }
+
+       .hamburger-menu div {
+           width: 25px;
+           height: 3px;
+           background-color: #333;
+       }
+
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+	.header {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.header-line{
+		display: block;
+	}
+
+	.contact {
+		display: none;
+	}
+
+	.nav a {
+		display: block;
+		padding: 10px;
+	}
+
+
+	.footer-content {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.footer-contact {
+		margin-bottom: 10px;
+	}
+}

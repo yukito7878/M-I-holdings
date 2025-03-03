@@ -1,0 +1,93 @@
+.customer {
+	background-color: #1a2a37;
+	background-image: url("../img/reviewBack.png");
+	background-repeat: no-repeat;
+	/* 画像を繰り返さない */
+	background-size: cover;
+	/* 画面いっぱいに表示 */
+	background-position: center;
+	/* 中央配置 */
+	background-color: rgba(16, 42, 68, 0.5);
+	/* 背景色を透明に */
+	color: white;
+	text-align: center;
+	padding: 40px 20px;
+}
+
+.customer-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.customer-review-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	flex-direction: column;
+	margin: auto;
+}
+
+.customer-review-each {
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	border-radius: 10px;
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+}
+
+.customer-img {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	margin-right: 50px;
+}
+
+.customer-information {
+	text-align: left;
+}
+
+.customer-name {
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.customer-review {
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+	.customer-review-container {
+		align-items: center;
+	}
+
+	.customer-review-each {
+		align-items: center;
+		text-align: center;
+		padding: 0;
+		margin-bottom: 30px;
+	}
+	
+	.customer-img {
+		width: 80px;
+		height: 80px;
+		margin-right: 10px;
+	}
+	
+	.customer-name {
+		font-size: 1.2rem;
+	}
+	
+	.customer-review {
+		font-size: 0.75rem;
+	}
+
+	.customer-information {
+		text-align: center;
+	}
+}

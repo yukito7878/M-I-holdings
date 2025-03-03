@@ -1,0 +1,125 @@
+.information {
+	background-image: url("../img/background4.png");
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: top left;
+	color: #1a2a37;
+	text-align: center;
+	padding: 40px 20px;
+}
+
+.information-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+.information-description {
+	font-size: 1.3rem;
+	margin-bottom: 30px;
+	line-height: 1.6;
+}
+
+.information-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+	margin-bottom: 30px;
+}
+
+.information-each {
+	background-color: white;
+	padding: 40px;
+	border-radius: 30px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	width: 270px;
+	text-align: center;
+}
+
+.information-each-title {
+	font-size: 1.3rem;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #002855;
+}
+
+.information-each-description {
+	font-size: 1.1rem;
+	line-height: 1.6;
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+.information-button-title {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.information-button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	background-color: #f9a825;
+	color: white;
+	font-weight: bold;
+	font-size: 1.3rem;
+	padding: 15px 25px;
+	text-decoration: none;
+	border-radius: 8px;
+	flex: 1;
+	gap: 20px;
+	max-width: 400px;
+	min-height: 80px;
+	text-align: left;
+}
+
+.information-button img {
+	width: 100px;
+	height: 100px;
+}
+
+.information-button:hover {
+	background-color: #d69400;
+}
+
+/* モバイル対応 */
+@media (max-width: 768px) {
+	.information{
+		padding: 30px 15px;
+	}
+	
+	.information-each-description {
+		margin-top: 20px;
+	}
+	
+	.information-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.information-each {
+		width: 90%;
+		padding: 30px;
+	}
+	
+	.information-button {
+		font-size: 1.2rem;
+		padding: 12px 20px;
+		text-decoration: none;
+		border-radius: 8px;
+		flex: 1;
+		gap: 20px;
+		max-width: 400px;
+		min-height: 80px;
+		text-align: left;
+	}
+	
+	.information-button img {
+		width: 60px;
+		height: 60px;
+	}
+}
