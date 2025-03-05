@@ -60,6 +60,10 @@
 	line-height: 1.6;
 }
 
+.privacy{
+	font-size:0.7rem;
+}
+
 /* モバイル対応 */
 @media (max-width: 768px) {
 	.customer-review-container {
