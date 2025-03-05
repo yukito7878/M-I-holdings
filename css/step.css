@@ -83,7 +83,7 @@
 	background-color: lawngreen;
 	border: 10px;
 	position: absolute;
-	left: -8px;
+	left: -13px;
 	color: white;
 	font-weight: bold;
 }
@@ -91,7 +91,7 @@
 /* モバイル対応 */
 @media (max-width: 768px) {
 	.step {
-		padding: 30px 15px;
+		padding: 30px 35px;
 	}
 	
 	.step-each-title {
@@ -100,7 +100,7 @@
 	
 	.step-each ul li {
 		margin-bottom: 5px;
-		width: 90%;
+		width: 95%;
 		margin: auto;
 		padding-left: 20px;
 		position: relative;
@@ -108,6 +108,7 @@
 
 	.step-description {
 		width: 100%;
+		font-size: 1rem;
 	}
 
 	.step-container {
