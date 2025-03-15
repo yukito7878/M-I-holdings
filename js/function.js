@@ -97,3 +97,24 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(element);
     });
 });
+
+
+// ヘッダーのスクロール挙動
+document.addEventListener("DOMContentLoaded", () => {
+	const header = document.querySelector(".header");
+	let lastScrollY = window.scrollY;
+
+	window.addEventListener("scroll", () => {
+		const currentScrollY = window.scrollY;
+
+		if (currentScrollY === 0) {
+			header.classList.remove("hidden");
+		} else if (currentScrollY > lastScrollY) {
+			header.classList.add("hidden");
+		} else {
+			header.classList.remove("hidden");
+		}
+
+		lastScrollY = currentScrollY;
+	});
+});

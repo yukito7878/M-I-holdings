@@ -5,23 +5,41 @@
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
-    position: relative;
-    width: 100%;
-    background: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 30px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: transparent;
+	z-index: 1000;
+	transition: transform 0.3s ease-in-out;
 }
 
-.header-line{
+.header.hidden {
+	transform: translateY(-100%);
+}
+
+h2 {
+	font-family: "Times New Roman", "ヒラギノ明朝 ProN", "游明朝", serif;
+
+}
+
+.header-line {
 	display: none;
+}
+
+.logo-img {
+	width: 70px;
+	height: 70px;
 }
 
 .logo {
 	font-size: 20px;
 	font-weight: bold;
+	color: white;
 }
 
 .nav {
@@ -31,7 +49,7 @@
 
 .nav a {
 	text-decoration: none;
-	color: #333;
+	color: white;
 	font-size: 14px;
 }
 
@@ -43,12 +61,14 @@
 
 .contact .phone {
 	font-size: 16px;
+	color: white;
 	font-weight: bold;
 }
 
 .contact .button {
-	background-color: orange;
+	background-color: transparent;
 	color: white;
+	border: 1px solid white;
 	padding: 8px 12px;
 	border-radius: 5px;
 	text-decoration: none;
@@ -63,7 +83,7 @@
 }
 
 .footer-content {
-	max-width: 1200px;
+	max-width: 1100px;
 	margin: auto;
 	display: flex;
 	justify-content: space-between;
@@ -72,33 +92,38 @@
 }
 
 .footer-contact {
-	font-size: 18px;
+	font-size: 1.5rem;
 	font-weight: bold;
+}
+
+.footer-info {
+	margin-right: 100px;
 }
 
 .footer-info p {
 	margin: 5px 0;
+	font-size: 0.6rem;
 }
 
 .footer-copyright {
 	text-align: center;
-	margin-top: 10px;
-	font-size: 14px;
+	margin-top: 5px;
+	font-size: 0.7rem;
 }
 
 /* ハンバーガーメニュー */
-       .hamburger-menu {
-           display: none;
-           flex-direction: column;
-           gap: 5px;
-           cursor: pointer;
-       }
+.hamburger-menu {
+	display: none;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+}
 
-       .hamburger-menu div {
-           width: 25px;
-           height: 3px;
-           background-color: #333;
-       }
+.hamburger-menu div {
+	width: 25px;
+	height: 3px;
+	background-color: #333;
+}
 
 
 /* モバイル対応 */
@@ -107,8 +132,8 @@
 		flex-direction: column;
 		align-items: center;
 	}
-	
-	.header-line{
+
+	.header-line {
 		display: block;
 	}
 
@@ -123,11 +148,19 @@
 
 
 	.footer-content {
-		flex-direction: column;
 		text-align: center;
 	}
 
 	.footer-contact {
-		margin-bottom: 10px;
+		font-size: 0.9rem;
+	}
+
+	.footer-info {
+		margin-right: 0px;
+		text-align: left;
+	}
+
+	.footer-info p {
+		font-size: 0.5rem;
 	}
 }

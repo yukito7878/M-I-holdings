@@ -87,11 +87,12 @@
 		font-size: 1.2rem;
 	}
 	
+	.footer-infomation{
+		margin-right: 0;
+	}
+	
 	.customer-review {
 		font-size: 0.75rem;
 	}
 
-	.customer-information {
-		text-align: center;
-	}
 }
