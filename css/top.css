@@ -52,6 +52,10 @@
 		display: none;
 	}
 	
+	.logo{
+		display: none;
+	}
+	
 	.hero_phone {
 		display: flex;
 		width: 100%;
