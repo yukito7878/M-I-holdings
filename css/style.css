@@ -8,7 +8,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10px 30px;
+	padding: 10px 15px;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -164,4 +164,27 @@ h2 {
 	.footer-info p {
 		font-size: 0.5rem;
 	}
+}
+
+/* ================================
+   ページ遷移アニメーション用CSS
+   ================================ */
+.page-transition-overlay {
+	position: fixed;
+	inset: 0;
+	background-color: #0e3a5a;
+	/* ブランドカラー推奨 */
+	z-index: 9999;
+	opacity: 1;
+	transition: opacity 0.6s ease;
+	pointer-events: none;
+	/* 初期は操作を邪魔しない */
+}
+
+.page-transition-overlay--hide {
+	opacity: 0;
+}
+
+.page-transition-overlay--show {
+	opacity: 1;
 }

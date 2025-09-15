@@ -1,0 +1,380 @@
+.group_image {
+	background-image: url("../img/background.png");
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: top left;
+	color: white;
+	text-align: center;
+	padding: 50px clamp(5vw, 15vw, 20vw);
+	/* PCでは15vw, スマホでは5vw */
+}
+
+.group-company {
+	background-image: url("../img/background4.png");
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: top left;
+	color: white;
+	text-align: center;
+	padding: 50px clamp(5vw, 15vw, 20vw);
+	/* PCでは15vw, スマホでは5vw */
+}
+
+.sinagy {
+	background-image: url("../img/background3.png");
+	background-repeat: repeat;
+	background-size: auto;
+	background-position: top left;
+	color: white;
+	text-align: center;
+	padding: 50px clamp(5vw, 15vw, 20vw);
+	/* PCでは15vw, スマホでは5vw */
+}
+
+/* ========== Subpages common styles ========== */
+:root {
+	--navy-900: #002244;
+	--navy-800: #002855;
+	--gold-500: #f9a825;
+	--ink-700: #0c2f50;
+	--charcoal: #1a2a37;
+	--bg-soft: #f5f5f5;
+	--radius-sm: 10px;
+	--radius-md: 16px;
+	--radius-lg: 24px;
+	--shadow-sm: 0 2px 6px rgba(0, 0, 0, .12);
+	--shadow-md: 0 4px 14px rgba(0, 0, 0, .18);
+}
+
+/* Header solid fallback for bright images */
+.header.is-solid {
+	background: rgba(0, 0, 0, .6);
+	backdrop-filter: blur(6px);
+}
+
+/* Subpage hero */
+.sub-hero {
+	position: relative;
+	height: min(75vh, 420px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	overflow: hidden;
+	text-align: center;
+}
+
+.sub-hero img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(.6);
+}
+
+.sub-hero .sub-hero__inner {
+	position: relative;
+	z-index: 1;
+	padding: 0 4vw;
+}
+
+.sub-hero h1 {
+	font-family: "Times New Roman", "ヒラギノ明朝 ProN", "游明朝", serif;
+	font-size: clamp(1.8rem, 4vw, 3rem);
+	letter-spacing: .03em;
+}
+
+.sub-hero p {
+	margin-top: .6rem;
+	font-size: clamp(.95rem, 1.8vw, 1.1rem);
+	opacity: .9;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+
+.breadcrumb .inner {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 10px 20px;
+	font-size: .85rem;
+}
+
+.breadcrumb a {
+	color: var(--ink-700);
+	text-decoration: none;
+}
+
+.breadcrumb span {
+	color: #888;
+}
+
+/* Section baseline */
+.section {
+	padding: clamp(32px, 6vw, 72px) 20px;
+}
+
+.section .inner {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+/* Cards grid */
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: clamp(16px, 2.8vw, 28px);
+}
+
+.card {
+	background: #fff;
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-md);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.card__media {
+	aspect-ratio: 16/10;
+	background: #e6e6e6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.card__media img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card__body {
+	padding: 18px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.card__title {
+	font-weight: 700;
+	color: var(--navy-900);
+	font-size: 1.1rem;
+}
+
+.badges {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.badge {
+	background: #eef3f8;
+	color: var(--navy-800);
+	border: 1px solid #d4e0ee;
+	font-size: .75rem;
+	padding: 4px 8px;
+	border-radius: 999px;
+}
+
+.card__text {
+	font-size: .95rem;
+	line-height: 1.7;
+	color: #333;
+}
+
+.card__actions {
+	margin-top: auto;
+}
+
+.btn-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	text-decoration: none;
+	font-weight: 700;
+	color: var(--navy-800);
+}
+
+.btn-link::after {
+	content: "→";
+}
+
+/* Split section */
+.split {
+	display: grid;
+	grid-template-columns: 1.1fr 1fr;
+	gap: 28px;
+	align-items: center;
+}
+
+.split img {
+	width: 100%;
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 900px) {
+	.split {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* CTA */
+.cta {
+	background: linear-gradient(180deg, #0e2941, #0c2237);
+	color: #fff;
+	text-align: center;
+}
+
+.cta .cta__box {
+	background: var(--gold-500);
+	color: var(--navy-900);
+	display: inline-flex;
+	align-items: center;
+	gap: 14px;
+	border-radius: 10px;
+	padding: 14px 22px;
+	font-weight: 800;
+	text-decoration: none;
+	box-shadow: var(--shadow-md);
+}
+
+.cta .cta__box img {
+	width: 52px;
+	height: 52px;
+}
+
+/* Company table */
+.kv3 {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+.info-table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	background: #fff;
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-md);
+	overflow: hidden;
+}
+
+.info-table tr:nth-child(odd) {
+	background: #fafafa;
+}
+
+.info-table th,
+.info-table td {
+	padding: 14px 16px;
+	vertical-align: top;
+	color: #0c2f50;
+	
+}
+
+.info-table th {
+	width: 30%;
+	background: #eef3f8;
+	color: #0c2f50;
+	text-align: left;
+}
+
+
+@media (max-width: 900px) {
+	.info-table th,
+	.info-table td {
+		padding: 10px 5px;
+		
+	}
+}
+
+/* Timeline */
+.timeline {
+	position: relative;
+	margin-left: 8px;
+	padding-left: 24px;
+}
+
+.timeline::before {
+	content: "";
+	position: absolute;
+	left: 8px;
+	top: 0;
+	bottom: 0;
+	width: 2px;
+	background: #dbe6f5;
+}
+
+.timeline-item {
+	position: relative;
+	margin: 0 0 18px 0;
+}
+
+.timeline-item::before {
+	content: "";
+	position: absolute;
+	left: -5px;
+	top: .35em;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--navy-800);
+}
+
+.timeline-item h4 {
+	margin-bottom: 4px;
+	color: var(--navy-800);
+	margin-left: 15px;
+}
+
+.timeline-item p {
+	margin: 0;
+	color: #333;
+}
+
+/* People cards */
+.people {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 22px;
+}
+
+.person {
+	background: #fff;
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-sm);
+	display: flex;
+	gap: 14px;
+	padding: 14px;
+}
+
+.person img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.person h4 {
+	margin: 4px 0 2px;
+}
+
+/* Breadcrumb hide on very small screens for compactness */
+@media (max-width:560px) {
+	.breadcrumb .inner {
+		font-size: .8rem;
+	}
+	
+}
+
+/* Utilities */
+.muted {
+	color: #6b7280;
+	font-size: .9rem;
+}
